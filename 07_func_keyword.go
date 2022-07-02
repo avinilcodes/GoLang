@@ -9,5 +9,5 @@ func calculatePrice(price, items int) int {
 }
 func main() {
 	var price, items int = 90, 6
-	fmt.Println("Total price of :", items, " is: ", calculatePrice(price, items))
+	fmt.Println("Total price of :", items, " items ", " is: ", calculatePrice(price, items))
 }
