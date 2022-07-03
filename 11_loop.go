@@ -1,5 +1,4 @@
-//Function that accepts variable number of arguments
-
+//Go has only for loop
 package main
 
 import (
@@ -11,8 +10,13 @@ func main() {
 		fmt.Println(i)
 	}
 	n := 2
+	//while like for
 	for n < 5 {
 		n *= 2
 	}
 	fmt.Println(n)
+	//infinite loop
+	// for {
+	// 	fmt.Println("Hello Go")
+	// }
 }

@@ -1,5 +1,3 @@
-//Function that accepts variable number of arguments
-
 package main
 
 import (
