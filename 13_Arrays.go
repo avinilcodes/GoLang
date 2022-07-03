@@ -12,6 +12,7 @@ func main() {
 	fmt.Println("array arr1:", arr1)
 	fmt.Println("If arr1 equals to arr: ", arr == arr1) //for array to be equal their type and elements should be same
 	arr[2] = 24
+	fmt.Println("array arr: ", arr)
 	fmt.Println("If arr1 equals to arr: ", arr == arr1) //for array to be equal their type and elements should be same
 
 	arr2 := [3][4]int{{1, 2, 3, 4}, {3, 2, 1}}
