@@ -16,7 +16,7 @@ func main() {
 	}
 	fmt.Println(n)
 	//infinite loop
-	// for {
-	// 	fmt.Println("Hello Go")
-	// }
+	for {
+		fmt.Println("Hello Go")
+	}
 }
