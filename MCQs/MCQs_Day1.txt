@@ -1,0 +1,145 @@
+Day: 01
+MCQs
+
+Que 1. What will be the output of the following code execution
+
+package main
+
+import "fmt"
+
+var enabled bool = true
+
+func main() {
+   var enabled = false
+
+   if enabled {
+       fmt.Println("hey there... !")
+       return
+   }
+
+   fmt.Println("make enabled true... !")
+}
+
+    A) compile-time error
+    B) make enabled true... ! (correct - enabled is false in main)
+    C) hey there... !
+    D) None of the above
+
+
+Que 2. What will be the output of the following code execution
+package main
+
+import "fmt"
+
+func main() {
+   var enabled = true
+   fmt.Println("hey there...!")
+}
+
+
+    A) compile-time error (correct - enabled declared but not used)
+    B) hey there... !
+    C) runtime error
+    D) None of the above
+
+Que 3. How many times you can use a package clause for a single source code file?
+    A) Once (correct – it gives compile time error if we use more than one package clause)
+    B) Multiple time
+    C) Twice
+    D) None of the above
+
+
+Que 4. Which one is an executable package?
+    A) package main with func main (correct – as package main tell compiler to make executable of the current program and execution starts from main)
+    B) package Main with func Main 
+    C) package exec with func exec
+    D) None of the above
+
+
+Que 5. What will be the output of the following code execution
+
+package main
+
+import "fmt"
+
+const PI float64
+
+func main() {
+    PI = 3.14
+    radius := 15.00
+    area := radius * radius * PI
+   
+    fmt.Printf("The area of a circle is %v\n", area)
+}
+
+
+Compile-time error (correct – as global constant is not initialized as well as assigning value to const after declaration)
+The area of a circle is 706.5
+Run time error
+None of the above
+
+
+
+
+
+Que 6. What is true about go build command
+
+    A) compiles the packages named by the import paths, along with their dependencies, but it does not install the results (correct)
+    B) When compiling packages, the build ignores files that end in '_test.go'.
+    C) When compiling a single non-main package, the build compiles the packages but discards the resulting object
+    D) All of the above
+
+
+Que 7. go install will compile and installs the packages named by the import paths in the directory named by the 
+    A) GOBIN environment variable
+    B) GOPATH environment variable (correct)
+    C) GOROOT environment variable
+    D) None of the above
+
+
+Que 8. go fmt command is used to take care of most formatting issues
+    A) TRUE  (correct)
+    B) FALSE
+
+
+
+Que 9. What will be the output following code execution
+package main
+
+import "fmt"
+
+const PI float64 = 3.14
+
+func main() {
+   r := 15
+   area := PI * r * r
+   fmt.Printf("The area of circle is : \n", area)
+}
+
+    A) Compile-time error(correct – Mismatched types error)
+    B) The area of a circle is 706.5()
+    C) Run time error
+    D) None of the above
+
+
+
+Que 10. What will be the output of the following code execution
+package main
+
+import "fmt"
+
+const PI float64 = 3.14
+
+func main() {
+   PI = 3.141
+   r := 15.00
+   area := PI * r * r
+   fmt.Printf("The area of circle is : \n", area)
+}
+
+
+    E) Compile-time error(correct – as it is trying to reassign to a const variable)
+    F) The area of a circle is 706.5
+    G) Run time error
+    H) None of the above
+
