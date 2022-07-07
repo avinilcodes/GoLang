@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func main() {
@@ -10,7 +11,7 @@ func main() {
 	var prev rune
 	var total uint = 0
 	for _, val := range num {
-		fmt.Println(total, prev)
+		fmt.Println("The previous element is: ", strconv.QuoteRune(prev), "Current element is: ", val)
 		if val == rune('I') {
 			total += 1
 			prev = val
