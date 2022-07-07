@@ -1,0 +1,227 @@
+MCQs
+
+1. What is the output of the following code block
+
+package main
+ 
+import "fmt"
+ 
+func main() {
+   s := sum(10, 20)
+   if s != nil {
+       fmt.Println(*s)
+   }
+}
+ 
+func sum(num1, num2 int) (sum *int) {
+   s := num1 + num2
+   return &s
+}
+ 
+30(correct- as we are passing address of s to main function)
+The program execution will not print anything on standard output
+Build error
+Runtime error
+
+
+
+2. What is the output of the following program execution
+package main
+ 
+import (
+   "fmt"
+)
+ 
+func main() {
+   switch {
+   case true:
+       fmt.Println("In true case")
+   case 1 < 2:
+       fmt.Println("In conditional operation check case")
+   case false:
+       fmt.Println("In false case")
+   default:
+       fmt.Println("In default case")
+   }
+}
+
+
+In true case(correct as we are passing true as case)
+In conditional operation check case
+Build error
+Runtime error
+
+
+Que 3. What is the output of the following code execution
+package main
+ 
+import (
+   "fmt"
+)
+ 
+func main() {
+   s := "GO"
+   for _, val := range s {
+       fmt.Println(val)
+   }
+}
+
+G 
+O
+71(correct - as we are iterating using range and what it does is, it goes index,and value)
+79
+      C)  Build error
+      D)  None of the above
+
+
+
+Que 4. What is the output of the following code execution
+package main
+ 
+import (
+   "fmt"
+)
+ 
+func main() {
+   i := 0
+   for i < 4 {
+       i++
+       if i == 2 {
+           continue
+       }
+ 
+       fmt.Print(i)
+   }
+ 
+}
+ 
+
+123
+245
+134(correct - as it will print 134)
+None of the above
+
+
+
+
+
+
+
+
+
+
+
+Que 5. What is the output of the following code execution
+package main
+ 
+import (
+   "fmt"
+)
+ 
+func main() {
+   i := 0
+   for i < 4 {
+       i++
+       if i == 3 {
+           break
+       }
+ 
+       fmt.Print(i)
+   }
+ 
+}
+
+12(correct - as it will break at i==3)
+23
+124
+None of the above
+
+
+Que 6. What is the output of following code execution
+package main
+ 
+import "fmt"
+ 
+func main() {
+   done := false
+   if done := true; done {
+       fmt.Println(done)
+   }
+ 
+   fmt.Println(done)
+}
+ 
+
+true and true
+false and false
+true and false (correct- as we are assigning true to done and both dones are different) 
+false and true
+
+
+
+
+Que 7. What will be the output of the following code execution 
+package main
+ 
+import "fmt"
+ 
+func main() {
+   on := 1
+   fmt.Println(on == true)
+}
+ 
+
+True
+False
+Build error(correct - mismatched typesl)
+None of the above
+
+
+
+Que 8. What will be the output of the following code execution 
+package main
+ 
+import "fmt"
+ 
+func main() {
+   str := "Hello"
+   for s := range str {
+       fmt.Printf("%v", s)
+   }
+}
+ 
+
+
+01234(correct - as it will give only indexes)
+72101108108111
+Build error
+None of the above
+
+
+
+Que 9: When should you use a struct type?
+For storing the same type of values
+For adding an additional type of values in runtime
+For combining different types in a single type to represent a concept (correct)
+None of the above
+ 
+Que 10. What will be the output of the following code execution
+package main
+ 
+import "fmt"
+ 
+type movie struct {
+   title, genre string
+   rating       float64
+   released     bool
+}
+ 
+func main() {
+   var lineKing movie
+   fmt.Printf("title: %v, rating: %v, released: %v", lineKing.title, lineKing.rating, lineKing.released)
+}
+ 
+title: , rating: 0, released: false(correct - as default value for string is “”, for float is 0 and for bool is false
+Build error
+Runtime error
+None of the above
