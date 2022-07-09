@@ -83,7 +83,6 @@ func main() {
 
 		json.Unmarshal(body, &person)
 		if person.Gender == "Male" || person.Gender == "Female" {
-			total += 1
 			enc := struct2csv.New()
 			var rows [][]string
 			headers, err := enc.GetColNames(person)
@@ -98,7 +97,7 @@ func main() {
 			if err != nil {
 				return
 			}
-			if stats.Size() == 0 {
+			if stats.Size() == 0 && total == 0 {
 				rows = append(rows, headers)
 			}
 			rows = append(rows, row)
@@ -106,6 +105,7 @@ func main() {
 			for i := 0; i < len(rows); i++ {
 				_ = csvWriter.Write(rows[i])
 			}
+			total += 1
 		}
 	}
 	csvWriter.Flush()
