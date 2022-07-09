@@ -53,9 +53,6 @@ type Person struct {
 	} `json:"subscription"`
 }
 
-func writeToCSV(n int) {
-
-}
 func main() {
 	start := time.Now()
 	total := 0
