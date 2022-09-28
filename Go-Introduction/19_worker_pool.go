@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func worker(id int, jobs <-chan int, results chan<- int) { //jobs is receiver channel and results is sender channel
+func worker(id int, jobs <-chan int, results chan<- int) { //jobs is sender channel and results is receiver channel
 	for j := range jobs {
 		fmt.Println("Worker ", id, "Started job ", j)
 		time.Sleep(time.Second)
