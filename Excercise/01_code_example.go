@@ -7,7 +7,7 @@ func g() (int, error) {
 }
 func f() (err error) {
 	if n, err := g(); err == nil {
-		return err
+		return err // here only return statement was there so it does not compile
 	} else {
 		return fmt.Errorf("%w:%d", err, n)
 	}
