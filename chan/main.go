@@ -9,6 +9,7 @@ func sayHello(ch chan<- string) {
 
 func main() {
 	ch := make(chan string, 1)
+	defer close(ch)
 	go sayHello(ch)
 
 	data := <-ch
